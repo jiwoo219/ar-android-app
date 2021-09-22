@@ -13,15 +13,110 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GltfActivity">
 
-  <fragment android:name="com.google.ar.sceneform.ux.ArFragment"
-      android:id="@+id/ux_fragment"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent" />
+    <fragment
+        android:id="@+id/ux_fragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bear"
+            android:text="Bear"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/tiger"
+            android:text="Tiger"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/alligator"
+            android:text="Alligator"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/penguin"
+            android:text="Penguin"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/panda"
+            android:text="Panda"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/pony"
+            android:text="Pony"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/wolf"
+            android:text="Wolf"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/raccoon"
+            android:text="Raccoon"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/animate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:elevation="1dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/playlist_play"/>
+
+</android.support.constraint.ConstraintLayout>
